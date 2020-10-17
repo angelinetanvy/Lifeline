@@ -111,6 +111,25 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: Icon(Icons.add),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items:[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            title: Text('Home'),
+            backgroundColor: Colors.blue
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_cart),
+            title: Text('Pharmacy'),
+            backgroundColor: Colors.blue
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.restaurant),
+            title: Text('Dietician'),
+            backgroundColor: Colors.blue
+          )
+        ]
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
