@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lifeline_app/pharmacyPage.dart';
 
 void main() {
   runApp(MyApp());
