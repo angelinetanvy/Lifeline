@@ -42,6 +42,11 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int currIndex = 0;
+  final List<Widget> _children = [
+    HomePage(title: 'Home Page',),
+    PharmacyPage(title: 'Pharmacy Page',),
+    DieticianPage(title: 'Dietician Page'),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -49,16 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'This is Home Page',
-            ),
-          ],
-        ),
-      ),
+      body: _children[currIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currIndex,
         items: [
@@ -82,6 +78,88 @@ class _MyHomePageState extends State<MyHomePage> {
         },
       ),
       // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+
+class PharmacyPage extends StatefulWidget {
+  PharmacyPage({Key key, this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  _PharmacyPageState createState() => _PharmacyPageState();
+}
+
+
+class _PharmacyPageState extends State<PharmacyPage> {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[Text('This is Pharmacy Page',),],
+        ),
+      ),
+    );
+  }
+}
+
+class DieticianPage extends StatefulWidget {
+  DieticianPage({Key key, this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  _DieticianPageState createState() => _DieticianPageState();
+}
+
+class _DieticianPageState extends State<DieticianPage> {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[Text('This is Dietician Page',),],
+        ),
+      ),
+    );
+  }
+}
+
+class HomePage extends StatefulWidget {
+  HomePage({Key key, this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[Text('This is Home Page',),],
+        ),
+      ),
     );
   }
 }
