@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'PharmacyPage.dart';
+import 'DieticianPage.dart';
+import 'HomePage.dart';
 
 void main() {
   runApp(MyApp());
@@ -42,6 +45,15 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int currIndex = 0;
+  final List<Widget> _children = [
+    HomePage(
+      title: 'Home Page',
+    ),
+    PharmacyPage(
+      title: 'Pharmacy Page',
+    ),
+    DieticianPage(title: 'Dietician Page'),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -49,16 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'This is Home Page',
-            ),
-          ],
-        ),
-      ),
+      body: _children[currIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currIndex,
         items: [
