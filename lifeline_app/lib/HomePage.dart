@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'MapPage.dart';
+//import 'MapPage.dart';
 import 'ProgressPage.dart';
 
 class HomePage extends StatefulWidget {
@@ -17,7 +17,15 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(icon: Icon(Icons.menu), onPressed:(){
+
+        }),
         title: Text(widget.title),
+        actions:<Widget>[
+          IconButton(icon: Icon(Icons.search), onPressed:(){
+
+          }),
+        ]
       ),
       floatingActionButton:
       Stack(

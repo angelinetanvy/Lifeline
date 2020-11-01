@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'PharmacyPage.dart';
 import 'DieticianPage.dart';
 import 'HomePage.dart';
+import 'SocialPage.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -56,6 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
       title: 'Pharmacy Page',
     ),
     DieticianPage(title: 'Dietician Page'),
+    SocialPage(title: 'Social Page'),
   ];
 
   @override
@@ -63,6 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+
       ),
       body: _children[currIndex],
       bottomNavigationBar: BottomNavigationBar(
@@ -79,6 +83,10 @@ class _MyHomePageState extends State<MyHomePage> {
           BottomNavigationBarItem(
               icon: Icon(Icons.restaurant),
               title: Text('Dietician'),
+              backgroundColor: Colors.blue),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.workspaces_filled),
+              title: Text('LifePods'),
               backgroundColor: Colors.blue)
         ],
         onTap: (index) {

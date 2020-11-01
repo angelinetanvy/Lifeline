@@ -18,8 +18,9 @@ class _DieticianPageState extends State<DieticianPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'This is Dietician Page',
+              'Focus on consultation and diet plans available, ',
             ),
+            Text("social media progressing")
           ],
         ),
       ),
