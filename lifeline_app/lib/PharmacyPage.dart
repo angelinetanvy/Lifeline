@@ -61,7 +61,7 @@ class _PharmacyPageState extends State<PharmacyPage> {
                     )
                   ],
                 ),
-                Image.asset(
+                new Image.asset(
                   "assets/images/${post["image"]}",
                   height: double.infinity,
                 )
@@ -101,13 +101,6 @@ class _PharmacyPageState extends State<PharmacyPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  Text(
-                    "\nMenu",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
-                  ),
                 ],
               ),
               const SizedBox(
