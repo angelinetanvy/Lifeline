@@ -1,11 +1,51 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class DrugDetail extends StatelessWidget {
+class DrugDetail extends StatefulWidget {
   dynamic currentDrug;
 
   DrugDetail(dynamic drug) {
     currentDrug = drug;
+  }
+
+  @override
+  _DrugDetailState createState() => _DrugDetailState(currentDrug);
+}
+
+class _DrugDetailState extends State<DrugDetail> {
+  dynamic currentDrug;
+  List<Text> tabInfos = [];
+  int currentIndex = 0;
+
+  _DrugDetailState(dynamic drug) {
+    currentDrug = drug;
+    tabInfos.add(Text(
+      "\n"+currentDrug['description'],
+      textAlign: TextAlign.justify,
+      style: TextStyle(
+        fontSize: 16,
+        color: Colors.white60,
+        fontWeight: FontWeight.normal,
+      ),
+    ));
+    tabInfos.add(Text(
+      "\n"+currentDrug['precautions'],
+      textAlign: TextAlign.justify,
+      style: TextStyle(
+        fontSize: 16,
+        color: Colors.white60,
+        fontWeight: FontWeight.normal,
+      ),
+    ));
+    tabInfos.add(Text(
+      "\n"+currentDrug['pharmacy'],
+      textAlign: TextAlign.justify,
+      style: TextStyle(
+        fontSize: 16,
+        color: Colors.white60,
+        fontWeight: FontWeight.normal,
+      ),
+    ));
   }
 
   @override
@@ -23,7 +63,8 @@ class DrugDetail extends StatelessWidget {
                 height: height * 0.55,
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage("assets/images/${currentDrug["image"]}"),
+                        image:
+                            AssetImage("assets/images/${currentDrug["image"]}"),
                         fit: BoxFit.cover)),
                 child: Container(
                   decoration: BoxDecoration(
@@ -77,6 +118,11 @@ class DrugDetail extends StatelessWidget {
                             indicatorSize: TabBarIndicatorSize.label,
                             indicatorColor: Colors.transparent,
                             indicator: UnderlineTabIndicator(),
+                            onTap: (index) {
+                              setState(() {
+                                currentIndex = index;
+                              });
+                            },
                             tabs: <Widget>[
                               Tab(
                                 child: Text("Description"),
@@ -89,23 +135,15 @@ class DrugDetail extends StatelessWidget {
                               ),
                             ],
                           ),
+                          tabInfos[currentIndex],
                           SizedBox(
                             height: 5,
                           ),
                         ],
-                      )
+                      ),
                     ),
                     SizedBox(
                       height: 8,
-                    ),
-                    Text(
-                      currentDrug['description'],
-                      style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.white60,
-                          fontWeight: FontWeight.normal,
-                          letterSpacing: 0.5,
-                          wordSpacing: 1.5),
                     ),
                     SizedBox(
                       height: 40,
@@ -124,7 +162,7 @@ class DrugDetail extends StatelessWidget {
                                   fontWeight: FontWeight.w600),
                             ),
                             Text(
-                              "RM"+currentDrug['price'].toString(),
+                              "RM" + currentDrug['price'].toString(),
                               style: TextStyle(
                                   color: Colors.white60,
                                   fontSize: 28,
@@ -147,7 +185,6 @@ class DrugDetail extends StatelessWidget {
                     ),
                   ],
                 ),
-                
               ),
               Positioned(
                 left: 30,
@@ -170,4 +207,3 @@ class DrugDetail extends StatelessWidget {
     );
   }
 }
-
