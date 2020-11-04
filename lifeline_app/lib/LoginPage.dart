@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:lifeline_app/SignUpPage.dart';
 
 import 'HomePage.dart';
+import 'main.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -12,7 +15,13 @@ class LoginPage extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('images/food1.jpg'), fit: BoxFit.cover)),
+                    image: AssetImage('assets/images/food4.jpg'),
+                    fit: BoxFit.cover)),
+          ),
+          Positioned(
+            left: 100,
+            top: 70,
+            child: Image.asset("assets/images/lifeline.png", height: 200),
           ),
           Container(
             decoration: BoxDecoration(
@@ -38,7 +47,7 @@ class LoginPage extends StatelessWidget {
                   height: 10,
                 ),
                 Text(
-                  "Time to cook, let's Sign in",
+                  "Your personal healthcare assistance.",
                   style: TextStyle(color: Colors.grey.shade500, fontSize: 16),
                 ),
                 SizedBox(
@@ -56,10 +65,12 @@ class LoginPage extends StatelessWidget {
                       fillColor: Color(0xff161d27).withOpacity(0.9),
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide(color: Color(0xfffe9721))),
+                          borderSide: BorderSide(
+                              color: Color.fromRGBO(35, 77, 135, 1.0))),
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide(color: Color(0xfffe9721))),
+                          borderSide: BorderSide(
+                              color: Color.fromRGBO(35, 77, 135, 1.0))),
                     ),
                   ),
                 ),
@@ -79,10 +90,12 @@ class LoginPage extends StatelessWidget {
                       fillColor: Color(0xff161d27).withOpacity(0.9),
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide(color: Color(0xfffe9721))),
+                          borderSide: BorderSide(
+                              color: Color.fromRGBO(35, 77, 135, 1.0))),
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide(color: Color(0xfffe9721))),
+                          borderSide: BorderSide(
+                              color: Color.fromRGBO(35, 77, 135, 1.0))),
                     ),
                   ),
                 ),
@@ -92,7 +105,9 @@ class LoginPage extends StatelessWidget {
                 Text(
                   "Forgot Password?",
                   style: TextStyle(
-                      color: Color(0xfffe9721), fontSize: 14, fontWeight: FontWeight.bold),
+                      color: Color.fromRGBO(35, 77, 135, 1.0),
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
                   height: 20,
@@ -103,11 +118,14 @@ class LoginPage extends StatelessWidget {
                   margin: EdgeInsets.only(left: 40, right: 40),
                   child: FlatButton(
                     onPressed: () {
-                      Navigator.push(context,
-                      MaterialPageRoute(builder:(context)=>HomePage()),
-                    );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                MyHomePage(title: "Lifeline")),
+                      );
                     },
-                    color: Color(0xfffe9721),
+                    color: Color.fromRGBO(35, 77, 135, 1.0),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
                     ),
@@ -133,11 +151,22 @@ class LoginPage extends StatelessWidget {
                     SizedBox(
                       width: 8,
                     ),
-                    Text(
-                      "Sign up",
-                      style:
-                          TextStyle(color:Color(0xfffe9721), fontWeight: FontWeight.bold),
-                    )
+                    RichText(
+                        text: TextSpan(
+                            text: "Sign up",
+                            style: TextStyle(
+                                color: Color.fromRGBO(35, 77, 135, 1.0),
+                                fontWeight: FontWeight.bold,
+                                decoration: TextDecoration.underline),
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          SignUpPage()),
+                                );
+                              }))
                   ],
                 ),
                 SizedBox(
