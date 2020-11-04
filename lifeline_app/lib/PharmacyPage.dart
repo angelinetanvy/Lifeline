@@ -50,7 +50,7 @@ class _PharmacyPageState extends State<PharmacyPage> {
                             fontSize: 28, fontWeight: FontWeight.bold),
                       ),
                       Text(
-                        post["brand"],
+                        post["type"],
                         style:
                             const TextStyle(fontSize: 17, color: Colors.grey),
                       ),
@@ -184,20 +184,14 @@ class ShopsScroller extends StatelessWidget {
                 margin: EdgeInsets.only(right: 20),
                 height: categoryHeight,
                 decoration: BoxDecoration(
-                    color: Colors.orange.shade400,
+                    color: Colors.teal.shade300,
                     borderRadius: BorderRadius.all(Radius.circular(20.0))),
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text(
-                        "Watson",
-                        style: TextStyle(
-                            fontSize: 25,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold),
-                      ),
+                      Image.asset("assets/images/watsons.png",height: 100,),
                       SizedBox(
                         height: 10,
                       ),
@@ -214,7 +208,7 @@ class ShopsScroller extends StatelessWidget {
                 margin: EdgeInsets.only(right: 20),
                 height: categoryHeight,
                 decoration: BoxDecoration(
-                    color: Colors.blue.shade400,
+                    color: Colors.red.shade300,
                     borderRadius: BorderRadius.all(Radius.circular(20.0))),
                 child: Container(
                   child: Padding(
@@ -222,13 +216,7 @@ class ShopsScroller extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Text(
-                          "Caring",
-                          style: TextStyle(
-                              fontSize: 25,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                        ),
+                        Image.asset("assets/images/caring.png",height: 100,),
                         SizedBox(
                           height: 10,
                         ),
@@ -246,20 +234,14 @@ class ShopsScroller extends StatelessWidget {
                 margin: EdgeInsets.only(right: 20),
                 height: categoryHeight,
                 decoration: BoxDecoration(
-                    color: Colors.lightGreenAccent.shade700,
+                    color: Colors.orange.shade800,
                     borderRadius: BorderRadius.all(Radius.circular(20.0))),
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text(
-                        "Guardian",
-                        style: TextStyle(
-                            fontSize: 25,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold),
-                      ),
+                      Image.asset("assets/images/guardian.png",height: 100,),
                       SizedBox(
                         height: 10,
                       ),

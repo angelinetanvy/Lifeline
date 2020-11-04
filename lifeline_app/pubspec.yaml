@@ -78,6 +78,9 @@ flutter:
     - assets/images/cart.svg
     - assets/images/search.svg
     - assets/images/back.svg
+    - assets/images/watsons.png
+    - assets/images/caring.png
+    - assets/images/guardian.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
