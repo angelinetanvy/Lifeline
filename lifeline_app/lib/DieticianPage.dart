@@ -45,7 +45,7 @@ class _DieticianPageState extends State<DieticianPage> {
                         ),
                         ),
                         subtitle: Text(
-                          "Hello, Roger",
+                          "Hello, Roger!",
                           style: TextStyle(
                             fontWeight: FontWeight.w800,
                             fontSize: 26,
@@ -506,3 +506,4 @@ class _mealCard extends StatelessWidget {
     );
   }
 }
+
