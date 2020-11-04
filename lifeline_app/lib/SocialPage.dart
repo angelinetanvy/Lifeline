@@ -15,6 +15,7 @@ class SocialPageState extends State<SocialPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFFE9E9E9),
       body: Container(
         padding: EdgeInsets.only(left:10, right:10, top:15),
         child: Column(
