@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:lifeline_app/LoginPage.dart';
 import 'package:provider/provider.dart';
 import 'PharmacyPage.dart';
 import 'DieticianPage.dart';
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'LifeLine'),
+      home: LoginPage(),
     );
   }
 }
