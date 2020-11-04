@@ -9,7 +9,8 @@ class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
+      body: 
+      Stack(
         children: <Widget>[
           Container(
             decoration: BoxDecoration(
@@ -24,6 +25,7 @@ class SignUpPage extends StatelessWidget {
               Color(0xff161d27),
             ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
           ),
+          SingleChildScrollView(child:
           Center(
             child: Column(
               children: <Widget>[
@@ -162,7 +164,7 @@ class SignUpPage extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(right:190,top: 10),
+                  margin: EdgeInsets.only(right:230,top: 10),
                   height: 20,
                   child: Text("New Password",style: TextStyle(color: Colors.white),),
                 ),
@@ -217,7 +219,7 @@ class SignUpPage extends StatelessWidget {
                 ),
               ],
             ),
-          ),
+          ),)
         ],
       ),
     );
