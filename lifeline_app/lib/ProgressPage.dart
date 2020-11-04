@@ -1,7 +1,7 @@
 
 
 
-//import 'package:lifeline_app/MapPage.dart';
+import 'package:lifeline_app/MapPage.dart';
 
 import 'CircleProgress.dart';
 import 'package:flutter/cupertino.dart';
@@ -36,9 +36,9 @@ class _ProgressPage extends State<ProgressPage> with SingleTickerProviderStateMi
           if (animation.value >0 && animation.value<0.5){
             print("here");
             progressController.stop();
-            //Navigator.push(context,
-              //MaterialPageRoute(builder:(context)=>MapPage()),
-            //);
+            Navigator.push(context,
+              MaterialPageRoute(builder:(context)=>MapPage()),
+            );
           }
         });
       });
