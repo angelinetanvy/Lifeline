@@ -33,11 +33,11 @@ class _HomePageState extends State<HomePage> {
         children: [
           Positioned(
               top: 100,
-              left: 75,
+              left: 64,
               child:
               RaisedButton(
-                  child: Text('Emergency',style: TextStyle(color: Colors.white)),
-                  color: Colors.red,
+                  child: Text('S O S',style: TextStyle(color: Colors.white, fontSize: 40, fontWeight: FontWeight.bold)),
+                  color: Color.fromRGBO(201, 14, 14, 1.0),
                   splashColor: Colors.lightBlue,
                   shape: CircleBorder(),
                   padding: EdgeInsets.all(100.0),

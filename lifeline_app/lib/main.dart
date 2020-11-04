@@ -66,17 +66,18 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFE9E9E9),
-      // appBar: AppBar(
-      //   title: Text(widget.title),
-      //
-      // ),
+      appBar: AppBar(
+        title: Text(widget.title),
+        backgroundColor:  Color.fromRGBO(35, 77, 135,1.0),
+
+      ),
       body: _children[currIndex],
       bottomNavigationBar: ClipRRect(
         borderRadius: BorderRadius.vertical(top: Radius.circular(30)) ,
         child: BottomNavigationBar(
           iconSize: 30,
           selectedIconTheme: IconThemeData(
-            color: const Color(0xFF200087),
+            color: Color.fromRGBO(35, 77, 135,1.0),
           ),
           unselectedIconTheme: IconThemeData(
             color: Colors.black12,

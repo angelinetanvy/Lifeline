@@ -15,7 +15,7 @@ class SocialPageState extends State<SocialPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFE9E9E9),
+      // backgroundColor: const Color(0xFFE9E9E9),
       body: Container(
         padding: EdgeInsets.only(left:10, right:10, top:15),
         child: Column(
@@ -77,7 +77,7 @@ class SocialPageState extends State<SocialPage> {
             Expanded(child: ListView(
               padding: EdgeInsets.only(top: 8),
               children: [
-                constructPostContent("https://images.pexels.com/photos/3926133/pexels-photo-3926133.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", "https://images.pexels.com/photos/1898866/pexels-photo-1898866.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940https://images.pexels.com/photos/1898866/pexels-photo-1898866.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", "UncleRoger", "Kuala Lumpur"),
+                constructPostContent("https://images.pexels.com/photos/3926133/pexels-photo-3926133.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", "https://images.pexels.com/photos/1898866/pexels-photo-1898866.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", "UncleRoger", "Kuala Lumpur"),
                 constructPostContent("https://images.pexels.com/photos/1234535/pexels-photo-1234535.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", "https://images.pexels.com/photos/3229336/pexels-photo-3229336.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", "Katlyn", "Penang"),
                 // constructPostContent("", ""),
               ],
