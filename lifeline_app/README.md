@@ -1,16 +1,9 @@
-# lifeline_app
+# Lifeline - Mobile Health Application
+Developed for Roche Hackathon 2020.
 
-A new Flutter project.
+## Objective
 
-## Getting Started
+With the motivation of enhancing health digitalisation, in a team of 4, we developed a mHealth app Lifeline.
+This app focus on emergency service, as the concerning rate of preventable death. Emergency aid will be provided with easy-navigation, and once it is called, the nearest aid will be coming to your spot which is viewable from given map. Auto message sender will also be sent to user's emergency contacts, so immediate attention could be given.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Another features are also provided to enhance user's health quality, such as online pharmacy, diet-plan, and more.
